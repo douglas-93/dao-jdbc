@@ -1,7 +1,6 @@
 package application;
 
 import db.DB;
-import model.entities.Departament;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
