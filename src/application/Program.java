@@ -39,5 +39,9 @@ public class Program {
         seller = sellerDao.findById(1);
         seller.setName("Nome Alterado pelo Update");
         sellerDao.update(seller);
+
+        System.out.println("=== Test 6: Seller delete ===");
+        sellerDao.deleteById(6);
+        System.out.println("Delete completed");
     }
 }
