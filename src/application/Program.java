@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 import java.util.List;
 
 public class Program {
@@ -29,5 +30,9 @@ public class Program {
         sellerList = sellerDao.findAll();
         sellerList.forEach(e -> System.out.println(e));
 
+        System.out.println("=== Test 4: Seller insert ===");
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, dep);
+        sellerDao.insert(newSeller);
+        System.out.println("ID inserido: " + newSeller.getId());
     }
 }
